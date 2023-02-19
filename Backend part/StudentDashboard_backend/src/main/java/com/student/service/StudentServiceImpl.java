@@ -16,7 +16,7 @@ public class StudentServiceImpl implements StudentService{
 	StudentRepository repo;
 	
 	@Override
-	public String registerStudent(Student st) throws StudentException {
+	public Student registerStudent(Student st) throws StudentException {
 
         Optional<Student> existingStudent=repo.findById(st.getRoll());
         if(!existingStudent.isEmpty())
@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService{
         }
         repo.save(st);
         
-        return "Student added successfully !";
+        return  st;
         
 		
 	}

@@ -5,5 +5,5 @@ import com.student.model.Student;
 
 public interface StudentService {
 
-	public String registerStudent(Student st) throws StudentException;
+	public Student registerStudent(Student st) throws StudentException;
 }
